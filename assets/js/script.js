@@ -19,20 +19,3 @@ const observador = new IntersectionObserver(entradas => {
   entradas.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visible'); observador.unobserve(e.target); } });
 }, {threshold:.12});
 document.querySelectorAll('.revelar').forEach(el => observador.observe(el));
-
-// Cohete libre: cambia de ruta al azar cada vez que termina un vuelo
-const cohete = document.getElementById('coheteLibre');
-if (cohete){
-  const rutas = ['ruta-1','ruta-2','ruta-3','ruta-4','ruta-5'];
-  let ultima = null;
-  function siguienteVuelo(){
-    cohete.classList.remove(...rutas);
-    void cohete.offsetWidth;
-    let elegida;
-    do { elegida = rutas[Math.floor(Math.random()*rutas.length)]; } while (elegida === ultima);
-    ultima = elegida;
-    cohete.classList.add(elegida);
-  }
-  cohete.addEventListener('animationend', siguienteVuelo);
-  setTimeout(siguienteVuelo, 1200);
-}

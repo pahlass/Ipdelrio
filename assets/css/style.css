@@ -35,57 +35,11 @@ a{color:inherit;text-decoration:none}
 .contenedor{width:min(1220px,92%);margin-inline:auto}
 section{position:relative}
 
-/* ---------- Cohete libre: vuela solo por toda la página, con rutas variadas ---------- */
-.cohete-libre{position:fixed;width:52px;height:52px;z-index:95;pointer-events:none;opacity:0}
-.cohete-libre svg{width:100%;height:100%;overflow:visible;animation:cohete-tambaleo 1.8s ease-in-out infinite}
-
-.cohete-libre.ruta-1{top:80vh;left:-9vw;animation:vuelo-1 20s ease-in-out 1 forwards}
-@keyframes vuelo-1{
-  0%{transform:translate(0,0) rotate(50deg);opacity:0}
-  6%{opacity:1} 45%{transform:translate(118vw,-66vh) rotate(50deg);opacity:1}
-  94%{opacity:0} 100%{opacity:0;transform:translate(118vw,-66vh) rotate(50deg)}
-}
-.cohete-libre.ruta-2{top:8vh;left:104vw;animation:vuelo-2 19s ease-in-out 1 forwards}
-@keyframes vuelo-2{
-  0%{transform:translate(0,0) rotate(-130deg);opacity:0}
-  6%{opacity:1} 45%{transform:translate(-118vw,68vh) rotate(-130deg);opacity:1}
-  94%{opacity:0} 100%{opacity:0;transform:translate(-118vw,68vh) rotate(-130deg)}
-}
-.cohete-libre.ruta-3{top:88vh;left:104vw;animation:vuelo-3 21s ease-in-out 1 forwards}
-@keyframes vuelo-3{
-  0%{transform:translate(0,0) rotate(-50deg);opacity:0}
-  6%{opacity:1} 45%{transform:translate(-116vw,-70vh) rotate(-50deg);opacity:1}
-  94%{opacity:0} 100%{opacity:0;transform:translate(-116vw,-70vh) rotate(-50deg)}
-}
-.cohete-libre.ruta-4{top:4vh;left:-9vw;animation:vuelo-4 18s ease-in-out 1 forwards}
-@keyframes vuelo-4{
-  0%{transform:translate(0,0) rotate(130deg);opacity:0}
-  6%{opacity:1} 45%{transform:translate(116vw,72vh) rotate(130deg);opacity:1}
-  94%{opacity:0} 100%{opacity:0;transform:translate(116vw,72vh) rotate(130deg)}
-}
-/* Ruta 5: entra, da un par de vueltas en el centro y se regresa por donde vino */
-.cohete-libre.ruta-5{top:42vh;left:-9vw;animation:vuelo-5 15s ease-in-out 1 forwards}
-@keyframes vuelo-5{
-  0%{transform:translate(0,0) rotate(90deg);opacity:0}
-  8%{opacity:1}
-  38%{transform:translate(58vw,0) rotate(90deg);opacity:1}
-  56%{transform:translate(58vw,0) rotate(450deg);opacity:1}
-  74%{transform:translate(58vw,0) rotate(630deg);opacity:1}
-  92%{transform:translate(0,0) rotate(630deg);opacity:1}
-  97%{opacity:0}
-  100%{opacity:0;transform:translate(0,0) rotate(630deg)}
-}
-@keyframes cohete-tambaleo{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
-.cohete-libre .humo{transform-box:fill-box;transform-origin:center;opacity:0;animation:humo-pulso 1s ease-out infinite}
-.cohete-libre .humo1{animation-delay:0s}
-.cohete-libre .humo2{animation-delay:.25s}
-.cohete-libre .humo3{animation-delay:.5s}
-@keyframes humo-pulso{0%{opacity:.6;transform:scale(.35)}100%{opacity:0;transform:scale(2.1)}}
-@media (max-width:720px), (prefers-reduced-motion:reduce){.cohete-libre{display:none}}
-
 /* ---------- Navegación ---------- */
-.nav{position:fixed;inset:0 0 auto 0;z-index:100;padding:22px 0;transition:background var(--transicion), box-shadow var(--transicion), padding var(--transicion)}
-.nav.compacta{background:rgba(253,251,246,.95);backdrop-filter:blur(14px);box-shadow:0 2px 30px rgba(13,32,51,.1);padding:13px 0}
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;padding:22px 0;transition:padding var(--transicion)}
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(253,251,246,.95);backdrop-filter:blur(14px);box-shadow:0 2px 30px rgba(13,32,51,.1);opacity:0;transition:opacity var(--transicion)}
+.nav.compacta{padding:13px 0}
+.nav.compacta::before{opacity:1}
 .nav-fila{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .marca{display:flex;align-items:center;gap:13px;color:var(--navy-900)}
 .marca-icono{width:42px;height:42px;border-radius:50%;background:var(--white);display:grid;place-items:center;padding:5px;box-shadow:0 4px 16px rgba(18,42,64,.15);flex:none}
