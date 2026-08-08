@@ -1,0 +1,8 @@
+{
+  "name": "instituto-pedagogico-del-rio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve -s . -l $PORT"
+  }
+}
