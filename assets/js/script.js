@@ -8,10 +8,14 @@ function alternarMenu(abierto){
   hamburguesa.classList.toggle('activo', abierto);
   hamburguesa.setAttribute('aria-expanded', abierto);
   hamburguesa.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-  document.body.classList.toggle('menu-abierto', abierto);
 }
 hamburguesa.addEventListener('click', () => alternarMenu(!menu.classList.contains('abierto')));
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => alternarMenu(false)));
+document.addEventListener('click', (e) => {
+  if (!menu.classList.contains('abierto')) return;
+  if (menu.contains(e.target) || hamburguesa.contains(e.target)) return;
+  alternarMenu(false);
+});
 
 const observador = new IntersectionObserver(entradas => {
   entradas.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visible'); observador.unobserve(e.target); } });
