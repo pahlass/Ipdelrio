@@ -12,6 +12,20 @@
 </head>
 <body>
 
+<!-- ===== Banda de aviso ===== -->
+<div class="banner-anuncio" id="bannerAnuncio">
+  <div class="contenedor banner-anuncio-fila">
+    <button class="banner-anuncio-texto abrir-modal-lista" type="button">
+      <span class="banner-anuncio-punto" aria-hidden="true"></span>
+      <span><strong>¡Ya están disponibles las listas de útiles escolares!</strong> <span class="banner-anuncio-extra">Consulta la de tu grado</span></span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <button class="banner-anuncio-cerrar" id="bannerCerrar" aria-label="Cerrar aviso">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</div>
+
 <!-- ===== Navegación ===== -->
 <header class="nav" id="nav">
   <div class="contenedor nav-fila">
@@ -27,7 +41,7 @@
         <li><a href="#niveles">Niveles</a></li>
         <li><a href="#dia">Un día aquí</a></li>
         <li><a href="#admision">Admisión</a></li>
-        <li><a href="#materiales">Listas de útiles</a></li>
+        <li><a href="#" class="abrir-modal-lista">Listas de útiles</a></li>
         <li><a href="#contacto" class="btn btn-lima btn-nav">Agenda tu visita</a></li>
       </ul>
     </nav>
@@ -286,69 +300,6 @@
   </div>
 </section>
 
-<!-- ===== Listas de útiles ===== -->
-<section class="materiales seccion" id="materiales">
-  <div class="contenedor">
-    <div class="encabezado-seccion revelar">
-      <span class="miga">Material escolar</span>
-      <h2>Listas de útiles por grado</h2>
-      <p>Descarga la lista de tu grado en PDF: cada artículo trae su casilla para irlo marcando conforme lo consigas.</p>
-    </div>
-
-    <div class="materiales-grupo pre revelar">
-      <h3>Preescolar</h3>
-      <div class="materiales-grid">
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-1-preescolar.pdf" download>
-          <span class="material-grado-circulo">1°</span>
-          <span class="material-nivel">Preescolar</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-2-preescolar.pdf" download>
-          <span class="material-grado-circulo">2°</span>
-          <span class="material-nivel">Preescolar</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-      </div>
-    </div>
-
-    <div class="materiales-grupo pri revelar">
-      <h3>Primaria</h3>
-      <div class="materiales-grid">
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-1-primaria.pdf" download>
-          <span class="material-grado-circulo">1°</span>
-          <span class="material-nivel">Primaria</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-2-primaria.pdf" download>
-          <span class="material-grado-circulo">2°</span>
-          <span class="material-nivel">Primaria</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-3-primaria.pdf" download>
-          <span class="material-grado-circulo">3°</span>
-          <span class="material-nivel">Primaria</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-4-primaria.pdf" download>
-          <span class="material-grado-circulo">4°</span>
-          <span class="material-nivel">Primaria</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-5-primaria.pdf" download>
-          <span class="material-grado-circulo">5°</span>
-          <span class="material-nivel">Primaria</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-        <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-6-primaria.pdf" download>
-          <span class="material-grado-circulo">6°</span>
-          <span class="material-nivel">Primaria</span>
-          <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== Vida escolar ===== -->
 <section class="vida seccion" id="vidaescolar">
   <div class="contenedor">
@@ -406,7 +357,7 @@
           <li><a href="#valor">Propuesta educativa</a></li>
           <li><a href="#dia">Un día aquí</a></li>
           <li><a href="#admision">Admisión</a></li>
-          <li><a href="#materiales">Listas de útiles</a></li>
+          <li><a href="#" class="abrir-modal-lista">Listas de útiles</a></li>
           <li><a href="#vidaescolar">Vida escolar</a></li>
         </ul>
       </div>
@@ -430,6 +381,75 @@
 <a class="whatsapp-flotante" href="https://wa.me/526677467009?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20el%20Instituto%20Pedag%C3%B3gico%20del%20R%C3%ADo" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 32 32" fill="#fff"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.2.59 4.28 1.63 6.07L4 29l8.1-2.12a11.9 11.9 0 0 0 3.92.66h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3Zm0 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.8 1 1.01-3.7-.24-.38a9.83 9.83 0 0 1-1.5-5.24c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.9-9.89 9.9Zm5.42-7.41c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
 </a>
+
+<!-- ===== Modal: listas de útiles ===== -->
+<div class="modal-fondo" id="modalFondo" hidden></div>
+<div class="modal-lista" id="modalLista" role="dialog" aria-modal="true" aria-labelledby="modalListaTitulo" hidden>
+  <button class="modal-cerrar" id="modalCerrar" aria-label="Cerrar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+
+  <div class="modal-lista-encabezado">
+    <span class="miga">Material escolar</span>
+    <h2 id="modalListaTitulo">Listas de útiles por grado</h2>
+    <p>Elige el nivel y el grado: cada PDF trae su casilla para ir marcando cada artículo conforme lo consigas.</p>
+  </div>
+
+  <div class="modal-tabs" role="tablist">
+    <button class="modal-tab activo" role="tab" type="button" aria-selected="true" aria-controls="panelPre" data-nivel="pre">Preescolar</button>
+    <button class="modal-tab" role="tab" type="button" aria-selected="false" aria-controls="panelPri" data-nivel="pri">Primaria</button>
+  </div>
+
+  <div class="modal-panel materiales-grupo pre" id="panelPre" role="tabpanel">
+    <div class="materiales-grid">
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-1-preescolar.pdf" download>
+        <span class="material-grado-circulo">1°</span>
+        <span class="material-nivel">Preescolar</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-2-preescolar.pdf" download>
+        <span class="material-grado-circulo">2°</span>
+        <span class="material-nivel">Preescolar</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="modal-panel materiales-grupo pri" id="panelPri" role="tabpanel" hidden>
+    <div class="materiales-grid">
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-1-primaria.pdf" download>
+        <span class="material-grado-circulo">1°</span>
+        <span class="material-nivel">Primaria</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-2-primaria.pdf" download>
+        <span class="material-grado-circulo">2°</span>
+        <span class="material-nivel">Primaria</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-3-primaria.pdf" download>
+        <span class="material-grado-circulo">3°</span>
+        <span class="material-nivel">Primaria</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-4-primaria.pdf" download>
+        <span class="material-grado-circulo">4°</span>
+        <span class="material-nivel">Primaria</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-5-primaria.pdf" download>
+        <span class="material-grado-circulo">5°</span>
+        <span class="material-nivel">Primaria</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+      <a class="material-tarjeta" href="assets/listas-utiles/lista-utiles-6-primaria.pdf" download>
+        <span class="material-grado-circulo">6°</span>
+        <span class="material-nivel">Primaria</span>
+        <span class="material-descarga">Descargar PDF <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M5 21h14"/></svg></span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <script src="assets/js/script.js" defer></script>
 </body>
