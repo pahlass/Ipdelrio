@@ -257,6 +257,27 @@ h2{font-size:clamp(2rem,3.8vw,3.1rem);margin-bottom:20px}
 .admision-cta{margin-top:56px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
 .nota-fecha{font-size:.9rem;color:var(--lima-soft);font-weight:700}
 
+/* ---------- Listas de útiles ---------- */
+.materiales{background:var(--cream)}
+.materiales .miga{color:var(--forest-700)}
+.materiales .encabezado-seccion p{color:rgba(18,42,64,.72)}
+.materiales-grupo{margin-top:44px}
+.materiales-grupo:first-of-type{margin-top:0}
+.materiales-grupo h3{font-family:'Gloock',serif;font-size:1.3rem;display:flex;align-items:center;gap:11px;margin-bottom:22px}
+.materiales-grupo h3::before{content:"";width:11px;height:11px;border-radius:3px;flex:none}
+.materiales-grupo.pre h3::before{background:var(--verde-confianza)}
+.materiales-grupo.pri h3::before{background:var(--azul-academia)}
+.materiales-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:16px}
+.material-tarjeta{background:var(--white);border-radius:22px;padding:26px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px;box-shadow:0 4px 20px rgba(18,42,64,.06);transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease}
+.material-tarjeta:hover{transform:translateY(-7px);box-shadow:0 22px 42px rgba(18,42,64,.13)}
+.material-grado-circulo{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-family:'Gloock',serif;font-size:1.4rem;color:var(--navy-900);margin-bottom:6px}
+.materiales-grupo.pre .material-grado-circulo{background:rgba(31,163,126,.12)}
+.materiales-grupo.pri .material-grado-circulo{background:rgba(59,111,224,.12)}
+.material-nivel{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:rgba(18,42,64,.55)}
+.material-descarga{margin-top:10px;font-size:.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.materiales-grupo.pre .material-descarga{color:var(--verde-confianza)}
+.materiales-grupo.pri .material-descarga{color:var(--azul-academia)}
+
 /* ---------- Vida escolar ---------- */
 .vida{background:var(--paper)}
 .vida .miga{color:var(--tierra)}
