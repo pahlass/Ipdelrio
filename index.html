@@ -236,32 +236,80 @@
     <div class="encabezado-seccion revelar">
       <span class="miga">Un día en el instituto</span>
       <h2>Así crece la jornada de tu hijo</h2>
-      <p>Rutinas claras que dan seguridad, de 7:30 a.m. a 3:00 p.m., con espacio para aprender, moverse y jugar.</p>
+      <p>Rutinas claras que dan seguridad, con espacio para aprender, moverse y jugar en cada etapa del día.</p>
     </div>
     <div class="linea-dia revelar">
-      <div class="momento">
-        <div class="hora">7:30</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
-        <div><h3>Bienvenida</h3><p>Recibimos a cada niño por su nombre para empezar el día con calma y confianza.</p></div>
+      <div class="momento abierto">
+        <div class="momento-numero">01</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="momento-cuerpo">
+          <button class="momento-boton" aria-expanded="true" aria-controls="dia-panel-1">
+            <h3>Bienvenida</h3>
+            <svg class="momento-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="momento-panel" id="dia-panel-1">
+            <div class="momento-panel-interior"><p>Recibimos a cada niño por su nombre para empezar el día con calma y confianza.</p></div>
+          </div>
+        </div>
       </div>
       <div class="momento">
-        <div class="hora">8:00</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/></svg></div>
-        <div><h3>Bloques por proyecto</h3><p>Lectoescritura, matemáticas y ciencias, investigando preguntas reales según cada grado.</p></div>
+        <div class="momento-numero">02</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/></svg></div>
+        <div class="momento-cuerpo">
+          <button class="momento-boton" aria-expanded="false" aria-controls="dia-panel-2">
+            <h3>Bloques por proyecto</h3>
+            <svg class="momento-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="momento-panel" id="dia-panel-2">
+            <div class="momento-panel-interior"><p>Lectoescritura, matemáticas y ciencias, investigando preguntas reales según cada grado.</p></div>
+          </div>
+        </div>
       </div>
       <div class="momento">
-        <div class="hora">10:15</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-3.6-8-6.6-8-10.5A5.3 5.3 0 0 1 12 7a5.3 5.3 0 0 1 8 3.5c0 3.9-3.5 6.9-8 10.5Z"/></svg></div>
-        <div><h3>Recreo</h3><p>Juego libre supervisado y refrigerio, para volver al aula con energía renovada.</p></div>
+        <div class="momento-numero">03</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-3.6-8-6.6-8-10.5A5.3 5.3 0 0 1 12 7a5.3 5.3 0 0 1 8 3.5c0 3.9-3.5 6.9-8 10.5Z"/></svg></div>
+        <div class="momento-cuerpo">
+          <button class="momento-boton" aria-expanded="false" aria-controls="dia-panel-3">
+            <h3>Recreo</h3>
+            <svg class="momento-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="momento-panel" id="dia-panel-3">
+            <div class="momento-panel-interior"><p>Juego libre supervisado y refrigerio, para volver al aula con energía renovada.</p></div>
+          </div>
+        </div>
       </div>
       <div class="momento">
-        <div class="hora">11:00</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M3.5 9h17M3.5 15h17"/></svg></div>
-        <div><h3>English time</h3><p>Clase diaria de inglés, con progreso medible rumbo a la certificación Cambridge.</p></div>
+        <div class="momento-numero">04</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M3.5 9h17M3.5 15h17"/></svg></div>
+        <div class="momento-cuerpo">
+          <button class="momento-boton" aria-expanded="false" aria-controls="dia-panel-4">
+            <h3>English time</h3>
+            <svg class="momento-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="momento-panel" id="dia-panel-4">
+            <div class="momento-panel-interior"><p>Clase diaria de inglés, con progreso medible rumbo a la certificación Cambridge.</p></div>
+          </div>
+        </div>
       </div>
       <div class="momento">
-        <div class="hora">12:15</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 12 12l5.5 5.5M17.5 6.5 12 12l-5.5 5.5"/></svg></div>
-        <div><h3>Artes y educación física</h3><p>Artes visuales, artes escénicas, música y movimiento, o educación física según el día.</p></div>
+        <div class="momento-numero">05</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 12 12l5.5 5.5M17.5 6.5 12 12l-5.5 5.5"/></svg></div>
+        <div class="momento-cuerpo">
+          <button class="momento-boton" aria-expanded="false" aria-controls="dia-panel-5">
+            <h3>Artes y educación física</h3>
+            <svg class="momento-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="momento-panel" id="dia-panel-5">
+            <div class="momento-panel-interior"><p>Artes visuales, artes escénicas, música y movimiento, o educación física según el día.</p></div>
+          </div>
+        </div>
       </div>
       <div class="momento">
-        <div class="hora">15:00</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l7 7-7 7M20 12H4"/></svg></div>
-        <div><h3>Salida</h3><p>Cierre del día con reporte breve a la familia sobre cómo le fue a cada niño.</p></div>
+        <div class="momento-numero">06</div><div class="punto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5l7 7-7 7M20 12H4"/></svg></div>
+        <div class="momento-cuerpo">
+          <button class="momento-boton" aria-expanded="false" aria-controls="dia-panel-6">
+            <h3>Salida</h3>
+            <svg class="momento-flecha" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="momento-panel" id="dia-panel-6">
+            <div class="momento-panel-interior"><p>Cierre del día con reporte breve a la familia sobre cómo le fue a cada niño.</p></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

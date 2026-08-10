@@ -236,15 +236,22 @@ h2{font-size:clamp(2rem,3.8vw,3.1rem);margin-bottom:20px}
 .dia .miga{color:var(--forest-700)}
 .dia .encabezado-seccion p{color:rgba(18,42,64,.72)}
 .linea-dia{display:grid;gap:0;max-width:780px}
-.momento{display:grid;grid-template-columns:96px 34px 1fr;gap:0 24px;align-items:flex-start;position:relative;padding-bottom:38px}
+.momento{display:grid;grid-template-columns:96px 34px 1fr;gap:0 24px;align-items:flex-start;position:relative;padding-bottom:22px}
 .momento:last-child{padding-bottom:0}
-.momento .hora{font-family:'Gloock',serif;font-size:1.15rem;color:var(--forest-700);text-align:right;padding-top:6px}
+.momento-numero{font-family:'Gloock',serif;font-size:1.1rem;color:var(--forest-700);text-align:right;padding-top:6px;font-variant-numeric:tabular-nums;opacity:.75}
 .momento .punto{width:34px;height:34px;border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:0 6px 16px rgba(18,42,64,.15);position:relative;z-index:2}
 .momento .punto svg{width:16px;height:16px;color:var(--forest-700)}
 .momento::before{content:"";position:absolute;left:calc(96px + 24px + 17px);top:34px;bottom:-4px;width:2px;background:repeating-linear-gradient(var(--forest-500) 0 6px, transparent 6px 12px);transform:translateX(-1px)}
 .momento:last-child::before{display:none}
-.momento h3{font-size:1.14rem;margin-bottom:5px}
-.momento p{font-size:.93rem;color:rgba(18,42,64,.68)}
+.momento-boton{display:flex;align-items:center;gap:14px;width:100%;background:none;border:none;cursor:pointer;text-align:left;padding:6px 0;font-family:inherit;color:inherit}
+.momento-boton h3{flex:1;font-size:1.14rem;margin:0;transition:color .25s ease}
+.momento-boton:hover h3{color:var(--forest-700)}
+.momento-flecha{flex:none;color:var(--forest-700);transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.momento.abierto .momento-flecha{transform:rotate(180deg)}
+.momento-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.16,1,.3,1)}
+.momento.abierto .momento-panel{grid-template-rows:1fr}
+.momento-panel-interior{overflow:hidden}
+.momento-panel-interior p{font-size:.93rem;color:rgba(18,42,64,.68);padding-top:6px}
 
 /* ---------- Admisión ---------- */
 .admision{background:var(--navy-900);color:var(--white)}

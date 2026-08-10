@@ -1,6 +1,15 @@
 const nav = document.getElementById('nav');
 addEventListener('scroll', () => { nav.classList.toggle('compacta', scrollY > 60); }, {passive:true});
 
+/* ---------- Acordeón "Un día aquí" ---------- */
+document.querySelectorAll('.momento-boton').forEach(boton => {
+  boton.addEventListener('click', () => {
+    const momento = boton.closest('.momento');
+    const abierto = momento.classList.toggle('abierto');
+    boton.setAttribute('aria-expanded', abierto);
+  });
+});
+
 const hamburguesa = document.getElementById('hamburguesa');
 const menu = document.getElementById('menu');
 function alternarMenu(abierto){
