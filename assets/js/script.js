@@ -44,7 +44,13 @@ if (localStorage.getItem('avisoUtilesOculto') === '1') {
   document.documentElement.style.setProperty('--barra-alto', '0px');
 } else {
   medirBanner();
-  addEventListener('resize', medirBanner);
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(medirBanner).observe(banner);
+  } else {
+    addEventListener('resize', medirBanner);
+  }
+  addEventListener('load', medirBanner);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(medirBanner);
 }
 bannerCerrar.addEventListener('click', () => {
   banner.classList.add('oculto');
